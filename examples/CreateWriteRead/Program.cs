@@ -22,7 +22,7 @@ namespace CreateWriteRead
             {
                 Console.WriteLine("Opening {0}...", Filename);
 
-                using (var db = DatabaseManager.Open(Filename))
+                using (var db = await DatabaseManager.OpenAsync(Filename))
                 {
                     // Get the bytes for a simple string
                     var encoding = Encoding.UTF8;

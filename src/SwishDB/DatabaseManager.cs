@@ -2,6 +2,8 @@
 // Licensed under the MIT License. See LICENSE.md in the project root for license information.
 
 using System.IO;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace SwishDB
 {
@@ -17,18 +19,19 @@ namespace SwishDB
         /// If the file does not exists, it is created and initialized.
         /// </remarks>
         /// <param name="path">The path of the file to create or open.</param>
+        /// <param name="cancellationToken">The cancellation token.</param>
         /// <returns>The database file.</returns>
-        public static IDatabaseFile Open(string path)
+        public static async Task<IDatabaseFile> OpenAsync(string path, CancellationToken cancellationToken = default(CancellationToken))
         {
             var file = new DatabaseFile();
 
             if (File.Exists(path))
             {
-                file.Open(path);
+                await file.OpenAsync(path, cancellationToken);
             }
             else
             {
-                file.Create(path);
+                await file.CreateAsync(path, cancellationToken);
             }
 
             return file;

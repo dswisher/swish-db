@@ -15,10 +15,10 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="../../src\SwishDB\SwishDB.csproj" />
+        <AdditionalFiles Include="../../src/stylecop.json" />
     </ItemGroup>
 
     <ItemGroup>
-        <AdditionalFiles Include="../../src/stylecop.json" />
+        <ProjectReference Include="../../src/SwishDB/SwishDB.csproj" />
     </ItemGroup>
 </Project>
