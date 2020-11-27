@@ -87,6 +87,16 @@ namespace SwishDB.Util
 
 
         /// <summary>
+        /// Write an unsigned short to the buffer.
+        /// </summary>
+        /// <param name="s">The unsigned short to write.</param>
+        public void WriteUShort(int s)
+        {
+            WriteUShort((ushort)s);
+        }
+
+
+        /// <summary>
         /// Write an array of bytes to the buffer.
         /// </summary>
         /// <remarks>

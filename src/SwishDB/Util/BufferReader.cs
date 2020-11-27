@@ -51,6 +51,26 @@ namespace SwishDB.Util
 
 
         /// <summary>
+        /// Read bytes from the buffer.
+        /// </summary>
+        /// <param name="len">The length of the bytes to read.</param>
+        /// <returns>The bytes that were read.</returns>
+        public byte[] ReadBytes(int len)
+        {
+            var bytes = new byte[len];
+
+            for (int i = 0; i < len; i++)
+            {
+                bytes[i] = buffer[currentOffset + i];
+            }
+
+            currentOffset += len;
+
+            return bytes;
+        }
+
+
+        /// <summary>
         /// Read a string of the specified length from the buffer, using ASCII encoding.
         /// </summary>
         /// <param name="len">The length of the string to read.</param>
