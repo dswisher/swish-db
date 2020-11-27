@@ -66,6 +66,29 @@ namespace SwishDB.Util
         /// <summary>
         /// Write an array of bytes to the buffer.
         /// </summary>
+        /// <param name="bytes">The bytes to write.</param>
+        public void WriteBytes(byte[] bytes)
+        {
+            foreach (var b in bytes)
+            {
+                WriteByte(b);
+            }
+        }
+
+
+        /// <summary>
+        /// Write an unsigned short to the buffer.
+        /// </summary>
+        /// <param name="s">The unsigned short to write.</param>
+        public void WriteUShort(ushort s)
+        {
+            WriteBytes(BitConverter.GetBytes(s));
+        }
+
+
+        /// <summary>
+        /// Write an array of bytes to the buffer.
+        /// </summary>
         /// <remarks>
         /// This does NOT include length.
         /// </remarks>

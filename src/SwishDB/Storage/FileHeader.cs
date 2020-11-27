@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 using SwishDB.Util;
 
-namespace SwishDB
+namespace SwishDB.Storage
 {
     /// <summary>
-    /// Wrapper to read/write page file header.
+    /// Wrapper to read/write the file header, which has a magic number and the block size.
     /// </summary>
-    internal class PageFileHeader
+    internal class FileHeader
     {
         private const int Length = 32;       // TODO - fine-tune and/or calc from fields?
 
@@ -20,9 +20,9 @@ namespace SwishDB
 
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="PageFileHeader"/> class.
+        /// Initializes a new instance of the <see cref="FileHeader"/> class.
         /// </summary>
-        public PageFileHeader()
+        public FileHeader()
         {
             Magic = "swish-db";
             MajorVersion = 1;
@@ -44,6 +44,11 @@ namespace SwishDB
         /// Gets or sets the minor version number.
         /// </summary>
         public byte MinorVersion { get; set; }
+
+        /// <summary>
+        /// Gets or sets the block size.
+        /// </summary>
+        public ushort BlockSize { get; set; }
 
 
         /// <summary>
@@ -67,6 +72,7 @@ namespace SwishDB
                 Magic = reader.ReadAsciiString(len);
                 MajorVersion = reader.ReadByte();
                 MinorVersion = reader.ReadByte();
+                BlockSize = reader.ReadUShort();
             }
         }
 
@@ -86,8 +92,7 @@ namespace SwishDB
                 writer.WriteAsciiString(Magic);
                 writer.WriteByte(MajorVersion);
                 writer.WriteByte(MinorVersion);
-
-                // TODO - rest of header
+                writer.WriteUShort(BlockSize);
             }
 
             // Go to the start, where the header should be located...

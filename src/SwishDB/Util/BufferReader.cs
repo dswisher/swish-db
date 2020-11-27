@@ -37,6 +37,20 @@ namespace SwishDB.Util
 
 
         /// <summary>
+        /// Read an unsigned short from the buffer.
+        /// </summary>
+        /// <returns>The unsigned short that was read.</returns>
+        public ushort ReadUShort()
+        {
+            var val = BitConverter.ToUInt16(buffer, currentOffset);
+
+            currentOffset += 2;
+
+            return val;
+        }
+
+
+        /// <summary>
         /// Read a string of the specified length from the buffer, using ASCII encoding.
         /// </summary>
         /// <param name="len">The length of the string to read.</param>
