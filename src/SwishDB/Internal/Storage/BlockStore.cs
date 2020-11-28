@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SwishDB.Internal.Storage
 {
-   /// <summary>
+    /// <summary>
     /// A data store consisting of small blocks of data.
     /// </summary>
     internal class BlockStore : IDisposable
