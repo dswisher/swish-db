@@ -5,11 +5,11 @@ using System.Threading;
 using System.Threading.Tasks;
 
 using FluentAssertions;
-using SwishDB.Storage;
+using SwishDB.Internal.Storage;
 using SwishDB.Tests.TestHelpers;
 using Xunit;
 
-namespace SwishDB.Tests.Storage
+namespace SwishDB.Tests.Internal.Storage
 {
     public class BlockStoreTests
     {

@@ -2,10 +2,10 @@
 using System;
 
 using FluentAssertions;
-using SwishDB.Util;
+using SwishDB.Internal.Storage;
 using Xunit;
 
-namespace SwishDB.Tests.Util
+namespace SwishDB.Tests.Internal.Storage
 {
     public class BufferReaderWriterTests : IDisposable
     {

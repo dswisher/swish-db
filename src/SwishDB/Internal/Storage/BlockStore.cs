@@ -6,9 +6,7 @@ using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
 
-using SwishDB.Util;
-
-namespace SwishDB.Storage
+namespace SwishDB.Internal.Storage
 {
    /// <summary>
     /// A data store consisting of small blocks of data.

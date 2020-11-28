@@ -5,9 +5,7 @@ using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
 
-using SwishDB.Util;
-
-namespace SwishDB.Storage
+namespace SwishDB.Internal.Storage
 {
     /// <summary>
     /// Wrapper to read/write the file header, which has a magic number and the block size.

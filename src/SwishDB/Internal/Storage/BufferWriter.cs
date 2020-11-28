@@ -4,7 +4,7 @@
 using System;
 using System.Text;
 
-namespace SwishDB.Util
+namespace SwishDB.Internal.Storage
 {
     /// <summary>
     /// Class to assist with writing values to a byte buffer.
