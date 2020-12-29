@@ -8,5 +8,8 @@ namespace SwishDB.TestCli.Options
     {
         [Option("db-file", Default = "db.sdb", HelpText = "The name of the database file to create.")]
         public string DBFileName { get; set; }
+
+        [Option("page", HelpText = "Dump the specified page.")]
+        public int? PageNum { get; set; }
     }
 }
