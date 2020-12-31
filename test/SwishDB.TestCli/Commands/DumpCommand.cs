@@ -3,6 +3,7 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 
+using SwishDB.Pages;
 using SwishDB.TestCli.Options;
 
 namespace SwishDB.TestCli.Commands

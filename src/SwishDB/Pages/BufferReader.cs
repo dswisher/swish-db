@@ -4,7 +4,7 @@
 using System;
 using System.Text;
 
-namespace SwishDB
+namespace SwishDB.Pages
 {
     /// <summary>
     /// Class to assist with reading values from a byte buffer.

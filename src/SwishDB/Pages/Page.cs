@@ -3,7 +3,7 @@
 
 using System;
 
-namespace SwishDB
+namespace SwishDB.Pages
 {
     /// <summary>
     /// The base class for all page objects.

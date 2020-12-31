@@ -1,10 +1,10 @@
 // Copyright (c) Doug Swisher. All Rights Reserved.
 // Licensed under the MIT License. See LICENSE.md in the project root for license information.
 
-namespace SwishDB
+namespace SwishDB.Pages
 {
     /// <summary>
-    /// The first page of any file.
+    /// The first page of every file.
     /// </summary>
     public class ZeroPage : Page
     {
@@ -19,7 +19,7 @@ namespace SwishDB
         /// </summary>
         public ZeroPage()
         {
-            PageType = 0x00;
+            PageType = PageId;
         }
 
 

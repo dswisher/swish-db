@@ -6,7 +6,7 @@ using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace SwishDB
+namespace SwishDB.Pages
 {
     /// <summary>
     /// A file consisting of pages of data.
@@ -60,7 +60,11 @@ namespace SwishDB
             await WritePageAsync(0, zeroPage, MinPageSize, cancellationToken);
 
             // Write the two header pages.
-            // TODO
+            var header1 = new HeaderPage();
+            var header2 = new HeaderPage();
+
+            await WritePageAsync(1, header1, cancellationToken);
+            await WritePageAsync(2, header2, cancellationToken);
         }
 
 
@@ -176,6 +180,10 @@ namespace SwishDB
             {
                 case ZeroPage.PageId:
                     page = new ZeroPage();
+                    break;
+
+                case HeaderPage.PageId:
+                    page = new HeaderPage();
                     break;
 
                 default:

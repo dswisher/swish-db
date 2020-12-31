@@ -34,6 +34,17 @@ TODO
 * [Apache Derby](https://db.apache.org/derby/index.html) - Java
 * [HSQLDB](http://hsqldb.org/) - Java - [sourceforge SVN](https://sourceforge.net/p/hsqldb/svn/HEAD/tree/)
 * [SQLite file format](https://www.sqlite.org/fileformat.html)
+* [LMDB](https://en.wikipedia.org/wiki/Lightning_Memory-Mapped_Database) - [SO post](https://stackoverflow.com/questions/35279756/what-is-special-about-internal-design-of-lmdb) about the design -> [slides](http://schd.ws/hosted_files/buildstuff14/96/20141120-BuildStuff-Lightning.pdf) - [Java wrapper](https://github.com/lmdbjava/lmdbjava) on github
+* [HaloDB](https://github.com/yahoo/HaloDB) by Yahoo - Java
+
+
+## BTrees
+
+* [BplusDotNet](http://bplusdotnet.sourceforge.net/) on Sourceforge, by Aaron Watters
+    * Fork: [C# Btree](https://github.com/thoward/bsharptree) on Github, by Troy Howard
+    * Fork: [BplusDotNet](https://github.com/petlof/BplusDotNet) on Github, by Peter Löfås
+* [B+Tree in Java](https://github.com/andylamp/BPlusTree) on github
+* [Old C# Btree](https://archive.codeplex.com/?p=sop) on codeplex
 
 
 ## Other Databases
