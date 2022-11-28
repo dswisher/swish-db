@@ -1,0 +1,20 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=4e88df2c_002Dbf5d_002D44a2_002D8849_002D8c0f7710c176/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Stuff" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;Or&gt;
+    &lt;And&gt;
+      &lt;TestAncestor&gt;
+        &lt;TestId&gt;xUnit::8DE42C75-8C55-4E84-BE14-1D60D18786E1::net6.0::SwishDb.UnitTests.Chunked.ChunkedFileTests&lt;/TestId&gt;
+        &lt;TestId&gt;xUnit::8DE42C75-8C55-4E84-BE14-1D60D18786E1::net6.0::SwishDb.UnitTests.Helpers.ByteArrayExtensionsTests&lt;/TestId&gt;
+      &lt;/TestAncestor&gt;
+      &lt;Not&gt;
+        &lt;And&gt;
+          &lt;Project Location="/Users/swisherd/git/swish-db/test/SwishDb.UnitTests" Presentation="&amp;lt;test&amp;gt;\&amp;lt;SwishDb.UnitTests&amp;gt;" /&gt;
+          &lt;Namespace&gt;SwishDb.UnitTests.Chunked&lt;/Namespace&gt;
+        &lt;/And&gt;
+      &lt;/Not&gt;
+    &lt;/And&gt;
+    &lt;TestAncestor&gt;
+      &lt;TestId&gt;xUnit::8DE42C75-8C55-4E84-BE14-1D60D18786E1::net6.0::SwishDb.UnitTests.Chunked.ChunkedFileTests.CanSaveAndRetrieve&lt;/TestId&gt;
+    &lt;/TestAncestor&gt;
+  &lt;/Or&gt;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
