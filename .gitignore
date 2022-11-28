@@ -2,6 +2,8 @@
 bin
 obj
 
+.idea
+
 doc/html
 doc/latex
 
